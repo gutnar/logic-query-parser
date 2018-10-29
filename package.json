@@ -1,5 +1,5 @@
 {
-  "name": "logic-query-parser",
+  "name": "extended-logic-query-parser",
   "version": "0.0.5",
   "description": "A parser for logic search string",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AnyFetch/logic-query-parser.git"
+    "url": "https://github.com/gutnar/logic-query-parser.git"
   },
   "keywords": [
     "logic",
