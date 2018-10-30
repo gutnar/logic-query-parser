@@ -1,5 +1,5 @@
 const lqp = require('../lib');
 
-const tree = lqp.parse('SCORE > 20 and not (SCORE = 50 or SCORE = 75)');
+const tree = lqp.parse('a != 1 and not b <= 10');
 
 console.log(JSON.stringify(tree, null, 4));

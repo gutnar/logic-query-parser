@@ -45,12 +45,21 @@ var stringLexeme = {
   priority: 0
 };
 
-var equalsLexeme = {
+var eLexeme = {
   regexp: '\=(\\s|\\(|\\)|"|$)',
   escaped: true,
   modifiers: 'i',
-  lexer: lexerHelper.generateCutLexer('equals', 1),
-  syntaxer: syntaxerHelper.generateBasicSyntaxer('equals'),
+  lexer: lexerHelper.generateCutLexer('e', 1),
+  syntaxer: syntaxerHelper.generateBasicSyntaxer('e'),
+  priority: 2
+};
+
+var neLexeme = {
+  regexp: '!\=(\\s|\\(|\\)|"|$)',
+  escaped: true,
+  modifiers: 'i',
+  lexer: lexerHelper.generateCutLexer('ne', 2),
+  syntaxer: syntaxerHelper.generateBasicSyntaxer('ne'),
   priority: 2
 };
 
@@ -101,7 +110,8 @@ var notLexeme = {
 
 module.exports = {
   not: notLexeme,
-  equals: equalsLexeme,
+  ne: neLexeme,
+  e: eLexeme,
   gt: gtLexeme,
   lt: ltLexeme,
   gte: gteLexeme,

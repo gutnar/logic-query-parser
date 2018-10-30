@@ -1,5 +1,5 @@
 # Logic Query Parser
-Generate binary tree with a logic query string as input
+Generate binary tree with a logic query string as input and convert it to disjunctive normal form (DNF).
 
 # How to install?
 ```
@@ -19,8 +19,15 @@ Avalaible options are for now :
 
 Available operators for now : AND, OR, parens, double quote
 
-# Example
+This extended version adds the NOT operator as well as comparison operators:
+* < (lt - lower than)
+* <= (lte - lower than or equal)
+* \> (gt - greater than)
+* \>= (gte - greater than or equal)
+* = (e - is equal)
+* != (ne - is not equal)
 
+# Example
 
 ```js
 var parser = require('logic-query-parser');
@@ -109,6 +116,71 @@ And the binary tree :
       right: null
     }
   }
+}
+```
+
+NOT operator and comparison example:
+
+```js
+var parser = require('logic-query-parser');
+
+var binaryTree = parser.parse('a > 1 and not b <= 10');
+```
+
+The binary tree will be:
+```js
+{
+    "lexeme": {
+        "type": "and"
+    },
+    "left": {
+        "lexeme": {
+            "type": "gt"
+        },
+        "left": {
+            "lexeme": {
+                "type": "string",
+                "value": "a"
+            },
+            "left": null,
+            "right": null
+        },
+        "right": {
+            "lexeme": {
+                "type": "string",
+                "value": "1"
+            },
+            "left": null,
+            "right": null
+        }
+    },
+    "right": {
+        "lexeme": {
+            "type": "not"
+        },
+        "left": null,
+        "right": {
+            "lexeme": {
+                "type": "lte"
+            },
+            "left": {
+                "lexeme": {
+                    "type": "string",
+                    "value": "b"
+                },
+                "left": null,
+                "right": null
+            },
+            "right": {
+                "lexeme": {
+                    "type": "string",
+                    "value": "10"
+                },
+                "left": null,
+                "right": null
+            }
+        }
+    }
 }
 ```
 

@@ -21,9 +21,12 @@
     "should": "4.0.x"
   },
   "author": "Quentin Buathier <quentin.buathier@epitech.eu>",
+  "contributors": [
+    "Gutnar Leede <gutnar@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AnyFetch/logic-query-parser/issues"
+    "url": "https://github.com/gutnar/logic-query-parser/issues"
   },
-  "homepage": "https://github.com/AnyFetch/logic-query-parser"
+  "homepage": "https://github.com/gutnar/logic-query-parser"
 }
