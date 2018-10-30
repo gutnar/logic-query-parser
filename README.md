@@ -1,5 +1,5 @@
 # Logic Query Parser
-Generate binary tree with a logic query string as input and convert it to disjunctive normal form (DNF).
+Generate binary tree with a logic query string as input.
 
 # How to install?
 ```
@@ -19,7 +19,7 @@ Avalaible options are for now :
 
 Available operators for now : AND, OR, parens, double quote
 
-This extended version adds the NOT operator as well as comparison operators:
+This extended version adds the NOT (alias !) operator as well as comparison operators:
 * < (lt - lower than)
 * <= (lte - lower than or equal)
 * \> (gt - greater than)
@@ -230,5 +230,3 @@ Returning:
 
 
 Take a look at `config/tests.js` for more samples
-
-Support: `support@anyfetch.com`.
