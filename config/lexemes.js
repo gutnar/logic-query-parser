@@ -103,7 +103,7 @@ var notLexeme = {
   regexp: '(not(\\s|\\(|\\)|"|$))|!',
   escaped: true,
   modifiers: 'i',
-  lexer: lexerHelper.generateRegexpCutLexer('not', /^(not|!)/),
+  lexer: lexerHelper.generateRegexpCutLexer('not', /^(not|!)/i),
   syntaxer: syntaxerHelper.notSyntaxer,
   priority: 3
 };
