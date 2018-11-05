@@ -100,7 +100,7 @@ var lteLexeme = {
 };
 
 var notLexeme = {
-  regexp: '(not|!)(\\s|\\(|\\)|"|$)',
+  regexp: '(not(\\s|\\(|\\)|"|$))|!',
   escaped: true,
   modifiers: 'i',
   lexer: lexerHelper.generateRegexpCutLexer('not', /^(not|!)/),
